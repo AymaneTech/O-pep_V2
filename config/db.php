@@ -1,11 +1,7 @@
 <?php
 
-$dsn = "mysql:host=localhost; dbname=opep";
-$username = "root";
-$pd = "";
-try {
-    $pdo = new PDO($dsn, $username, $pd);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die ("connection to db failed homie !!! " . $e->getMessage());
+$connection = mysqli_connect("localhost", "root", "", "opep_v2");
+
+if (!$connection) {
+    die("there is an error in connection to db homie !! : ". mysql_error());
 }
