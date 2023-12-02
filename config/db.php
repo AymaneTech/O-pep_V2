@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:host=localhost; dbname=opep";
+$dsn = "mysql:host=localhost; dbname=opep_v2";
 $username = "root";
 $pd = "";
 try {
